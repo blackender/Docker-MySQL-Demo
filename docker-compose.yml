@@ -10,8 +10,9 @@ services:
               - "./db:/var/lib/mysql"
               - "./conf/my.cnf:/etc/my.cnf"
               - "./init:/docker-entrypoint-initdb.d/"
+              - "./opt:/opt/sql"
       environment:
               MYSQL_ROOT_PASSWORD: "recDBRoot" # 设置MySQL的root密码
-              MYSQL_USER: "nathan" # 设置普通用户
-              MYSQL_PASSWORD: "testpwd" # 设置用户密码 
+              # MYSQL_USER: "nathan" # 设置普通用户
+              # MYSQL_PASSWORD: "testpwd" # 设置用户密码 
       restart: always
