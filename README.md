@@ -4,8 +4,7 @@
 
 ## 主要功能
 1. 从DockerHub上获取MySQL镜像
-2. 自动下载npm环境，编译Webstrates
-3. 从DockerHub上获取MongoDB镜像，与Webstrates连接
+2. 自动创建数据库，并初始化数据表
 
 ## 安装
 
