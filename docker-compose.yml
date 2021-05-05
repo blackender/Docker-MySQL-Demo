@@ -1,18 +1,17 @@
 version: "3.5"
 
 services:
-
-    mysql-db:
+    mysql:
+      network_mode: "host" # 设置容器的网络模式
       image: mysql:latest
-      container_name: mysql-db
-      command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+      container_name: mysqldb
+      # command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
       volumes:
-              - ./db:/var/lib/mysql
-              - ./conf/my.cnf:/etc/my.cnf
-              - ./init:/docker-entrypoint-initdb.d/
+              - "./db:/var/lib/mysql"
+              - "./conf/my.cnf:/etc/my.cnf"
+              - "./init:/docker-entrypoint-initdb.d/"
       environment:
-              - MYSQL_ROOT_PASSWORD=mycloud
-              # - MYSQL_DATABASE=nextcloud
-              - MYSQL_USER=nathan
-              - MYSQL_PASSWORD=interboy
+              MYSQL_ROOT_PASSWORD: "recDBRoot" # 设置MySQL的root密码
+              MYSQL_USER: "nathan" # 设置普通用户
+              MYSQL_PASSWORD: "testpwd" # 设置用户密码 
       restart: always

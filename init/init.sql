@@ -2,7 +2,7 @@ CREATE USER 'nathan'@'%' IDENTIFIED BY 'testpwd';
 GRANT All privileges ON *.* TO 'nathan'@'%';
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'recDBRoot';
 CREATE DATABASE wyt_lyj;
-use wyt_lyj;
+USE wyt_lyj;
 CREATE TABLE patterns
 (
     pic_id int(10) primary key COMMENT '图片ID',
