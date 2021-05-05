@@ -78,5 +78,3 @@ docker-compose up -d
 docker-compose down
 ```
 
-### 测试
-在浏览器中打开```http://localhost:7007/```,看到空白页面即为成功
