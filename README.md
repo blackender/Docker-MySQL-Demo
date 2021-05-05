@@ -6,27 +6,25 @@
 1. 从DockerHub上获取MySQL镜像
 2. 自动创建数据库，并初始化数据表
 
-## 安装
+## 一、安装Docker
 
-### 安装Docker
-
-#### Ubuntu
+### Ubuntu
 ```bash
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 ```
 
-#### CentOS
+### CentOS
 ```bash
 sudo yum -y install docker-ce
 ```
 
-#### MacOS
+### MacOS
 ```bash
 brew install docker
 ```
 
-#### 设置国内docker-hub源
+## 二、设置国内docker-hub源
 ```bash
 # 创建位置文件夹（如果已存在可以不做此部）
 sudo mkdir -p /etc/docker
@@ -45,7 +43,7 @@ sudo systemctl daemon-reload
 sudo systemctl start docker
 ```
 
-#### 设置docker的sudo权限
+## 三、设置docker的sudo权限（Optional）
 ```bash
 # 创建docker组
 sudo groupadd docker
@@ -57,7 +55,7 @@ sudo service docker restart
 newgrp - docker
 ```
 
-### 安装Docker-compose
+## 四、安装Docker-compose
 ```bash
 # 安装
 curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -67,7 +65,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose -v
 ```
 
-## 使用
+## 五、搭建数据库
 
 ### 启动服务
 ```bash
@@ -75,5 +73,12 @@ cd <docker-compose.yml所在文件夹>
 docker-compose up -d
 # 如果需要关闭服务则使用命令
 docker-compose down
+```
+
+### 测试
+```bash
+docker ps # 查看container id
+docker exec -it <container id> /bin/bash # 进入 container
+mysql -u nathan -p # 登录mysql下的测试数据库，密码是testpwd
 ```
 
