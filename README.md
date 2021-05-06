@@ -8,6 +8,8 @@
 
 ## 一、安装Docker
 
+**Windows的Docker配置和安装方法请自行百度**
+
 ### Ubuntu
 ```bash
 sudo apt-get update && sudo apt-get upgrade
@@ -20,7 +22,7 @@ sudo yum -y install docker-ce
 ```
 
 ### MacOS
-```bash
+```bash!
 brew install docker
 ```
 
