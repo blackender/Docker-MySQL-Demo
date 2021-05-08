@@ -6,10 +6,9 @@
 1. 从DockerHub上获取MySQL镜像
 2. 自动创建数据库，并初始化数据表
 
-## 一、安装Docker
+## 一、安装Docker 
 
-**Windows的Docker配置和安装方法请自行百度**
-
+**Windows的Docker配置和安装方法请自行百度
 ### Ubuntu
 ```bash
 sudo apt-get update && sudo apt-get upgrade
@@ -67,7 +66,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose -v
 ```
 
-## 五、搭建数据库
+## 五、搭建数据库服务
 
 ### 启动服务
 ```bash
