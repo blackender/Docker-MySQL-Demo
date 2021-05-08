@@ -25,7 +25,7 @@ sudo yum -y install docker-ce
 brew install docker
 ```
 
-## 二、设置国内docker-hub源
+## 二、设置国内docker-hub源 (Optional)
 ```bash
 # 创建位置文件夹（如果已存在可以不做此部）
 sudo mkdir -p /etc/docker
